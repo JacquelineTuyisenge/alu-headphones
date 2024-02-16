@@ -15,13 +15,18 @@ body {
 }
 
 // Hero section styles
-.hero {
+header .hero{
   display: flex;
-  background-image: url("images/headphones_hero_1.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 120vh;
+  // position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
+}
+header img{
+  width: auto;
 }
 
 // Navbar styles
@@ -68,7 +73,7 @@ nav ul li a:hover {
 // Content over image styles
 .content-over-image {
   position: absolute;
-  top: 85%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -111,7 +116,6 @@ nav ul li a:hover {
   background-color: $primary-color;
   color: white;
 }
-
 // Media query for small screens
 @media screen and (max-width: 600px) {
   .navbar {
@@ -157,4 +161,38 @@ nav ul li a:hover {
     margin: 15px 0;
     font-size: 1.2em;
   }
+  header .hero img {
+    width: auto;
+  }
+  .what-we-do-words {
+
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    h2 {
+      padding: 5px;
+    }
+
+    p {
+      padding: 5px;
+    }
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  /* Styles for medium screens (e.g., tablets) */
+  .what-we-do-words {
+    width: 75%;
+    padding: 20px;
+    text-align: center;
+    h2 {
+      padding: 7px;
+    }
+
+    p {
+      padding: 5px;
+    }
+  }
+}
+@media screen and (min-width: 1001px) {
+  /* Styles for large screens (e.g., desktops and laptops) */
 }
